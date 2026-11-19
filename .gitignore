@@ -62,3 +62,6 @@ build/
 # Misc
 *.tar
 *.zip
+
+# Nested repository (do not include)
+Watch-and-Jewellry/
