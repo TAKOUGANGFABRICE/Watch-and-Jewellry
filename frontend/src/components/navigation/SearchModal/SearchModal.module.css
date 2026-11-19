@@ -1,0 +1,262 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(34, 34, 34, 0.7);
+  backdrop-filter: blur(6px);
+  z-index: var(--z-modal);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: clamp(40px, 10vh, 100px);
+  padding-left: var(--space-md);
+  padding-right: var(--space-md);
+  animation: fadeIn var(--transition-fast) ease;
+}
+
+.modal {
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 680px;
+  border-radius: var(--radius-none);
+  border: 1px solid var(--color-champagne-gold);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: slideDown var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.searchHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-grey);
+  position: relative;
+}
+
+.searchIcon {
+  color: var(--color-champagne-gold);
+  flex-shrink: 0;
+}
+
+.searchInput {
+  flex: 1;
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  color: var(--color-charcoal);
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.searchInput::placeholder {
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  color: var(--color-muted-grey);
+  font-weight: 300;
+}
+
+.clearBtn {
+  background: none;
+  border: none;
+  color: var(--color-muted-grey);
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color var(--transition-fast);
+}
+
+.clearBtn:hover {
+  color: var(--color-charcoal);
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid var(--color-border-grey);
+  margin-left: var(--space-xs);
+  transition: color var(--transition-fast);
+}
+
+.closeBtn:hover {
+  color: var(--color-champagne-gold);
+}
+
+/* Modal Body */
+.modalBody {
+  max-height: 480px;
+  overflow-y: auto;
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Suggestions Section */
+.suggestionsGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.groupLabel {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-muted-grey);
+}
+
+.pillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.suggestionPill {
+  background-color: var(--color-cream-subtle);
+  border: 1px solid var(--color-border-grey);
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-radius: var(--radius-none);
+}
+
+.suggestionPill:hover {
+  border-color: var(--color-champagne-gold);
+  color: var(--color-champagne-gold);
+  background-color: var(--color-white);
+}
+
+/* Live Results List */
+.resultsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.resultItem {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  padding: var(--space-xs);
+  border-bottom: 1px solid var(--color-border-light);
+  text-decoration: none;
+  transition: background-color var(--transition-fast);
+}
+
+.resultItem:hover {
+  background-color: var(--color-cream-subtle);
+}
+
+.resultThumb {
+  width: 52px;
+  height: 52px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--color-border-grey);
+  background-color: var(--color-warm-cream);
+  flex-shrink: 0;
+}
+
+.resultDetails {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.resultBrand {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-champagne-gold);
+}
+
+.resultName {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-charcoal);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.resultMeta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.76rem;
+  color: var(--color-muted-grey);
+}
+
+.resultPrice {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-charcoal);
+  white-space: nowrap;
+}
+
+.modalFooter {
+  padding: var(--space-md) var(--space-lg);
+  background-color: var(--color-cream-subtle);
+  border-top: 1px solid var(--color-border-grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seeAllLink {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-charcoal);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.seeAllLink:hover {
+  color: var(--color-champagne-gold);
+}
+
+.escHint {
+  font-size: 0.72rem;
+  color: var(--color-muted-grey);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

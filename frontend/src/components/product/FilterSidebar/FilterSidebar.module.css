@@ -1,0 +1,242 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-grey);
+  padding: var(--space-lg);
+  position: sticky;
+  top: calc(var(--header-height) + 20px);
+}
+
+.sidebarHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-border-grey);
+  padding-bottom: var(--space-sm);
+}
+
+.headerTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-charcoal);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resetBtn {
+  background: none;
+  border: none;
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-muted-grey);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.resetBtn:hover {
+  color: var(--color-error);
+}
+
+/* Filter Groups */
+.filterGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  border-bottom: 1px solid var(--color-border-light);
+  padding-bottom: var(--space-md);
+}
+
+.filterGroup:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.groupTitle {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--color-charcoal);
+  margin-bottom: 2px;
+}
+
+/* Price Inputs */
+.priceInputs {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.priceField {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.priceLabel {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  color: var(--color-muted-grey);
+}
+
+.priceInput {
+  width: 100%;
+  padding: 8px 10px;
+  font-size: 0.84rem;
+  font-family: var(--font-sans);
+  border: 1px solid var(--color-border-grey);
+  border-radius: var(--radius-none);
+  outline: none;
+  background-color: var(--color-white);
+  color: var(--color-charcoal);
+}
+
+.priceInput:focus {
+  border-color: var(--color-champagne-gold);
+}
+
+/* Checkbox & Radio Options */
+.optionList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 180px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.optionLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--color-charcoal);
+  cursor: pointer;
+  padding: 2px 0;
+  user-select: none;
+  transition: color var(--transition-fast);
+}
+
+.optionLabel:hover {
+  color: var(--color-champagne-gold);
+}
+
+.checkbox {
+  accent-color: var(--color-champagne-gold);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+/* Swatches for Colors */
+.swatchGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.swatchBtn {
+  border: 1px solid var(--color-border-grey);
+  background-color: var(--color-cream-subtle);
+  padding: 5px 10px;
+  font-size: 0.74rem;
+  font-family: var(--font-sans);
+  color: var(--color-charcoal);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.swatchBtn:hover {
+  border-color: var(--color-champagne-gold);
+  color: var(--color-champagne-gold);
+}
+
+.swatchActive {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  border-color: var(--color-charcoal);
+}
+
+/* Rating Stars Filter */
+.ratingOption {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: var(--color-charcoal);
+  cursor: pointer;
+}
+
+.starsRow {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: var(--color-champagne-gold);
+}
+
+/* Mobile Drawer Overlay */
+.mobileDrawerBackdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-modal);
+  display: flex;
+  justify-content: flex-start;
+  animation: fadeIn var(--transition-fast) ease;
+}
+
+.mobileDrawer {
+  width: min(88vw, 360px);
+  height: 100%;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: slideLeft var(--transition-normal) cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobileDrawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-grey);
+}
+
+.mobileDrawerBody {
+  padding: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  flex: 1;
+  overflow-y: auto;
+}
+
+.mobileDrawerFooter {
+  padding: var(--space-md) var(--space-lg);
+  border-top: 1px solid var(--color-border-grey);
+  background-color: var(--color-cream-subtle);
+  display: flex;
+  gap: var(--space-sm);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideLeft {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}

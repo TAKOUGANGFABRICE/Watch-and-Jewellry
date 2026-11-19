@@ -1,0 +1,153 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--space-xl);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-xs);
+}
+
+.subtitle {
+  font-size: 0.88rem;
+  color: var(--color-muted-grey);
+}
+
+.privilegeCard {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-xl);
+  border: 1px solid var(--color-border-grey);
+}
+
+.badgeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-md);
+}
+
+.vipBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--color-champagne-gold);
+  color: var(--color-charcoal);
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.78rem;
+  color: #A5D6A7;
+}
+
+.customerName {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  margin-bottom: var(--space-md);
+  letter-spacing: 0.04em;
+}
+
+.infoMeta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  font-size: 0.85rem;
+  color: #CCCCCC;
+}
+
+.metaItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+  background-color: var(--color-cream-subtle);
+  padding: var(--space-xl);
+  border: 1px solid var(--color-border-grey);
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.actionRow {
+  grid-column: 1 / -1;
+  display: flex;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.readOnlyGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 600px) {
+  .readOnlyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.detailBox {
+  background-color: var(--color-cream-subtle);
+  padding: var(--space-md);
+  border: 1px solid var(--color-border-grey);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.detailLabel {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--color-muted-grey);
+  letter-spacing: 0.05em;
+}
+
+.detailValue {
+  font-size: 0.95rem;
+  color: var(--color-charcoal);
+  font-weight: 500;
+}
+
+.successAlert {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: var(--space-md);
+  background-color: rgba(46, 125, 50, 0.1);
+  color: var(--color-success);
+  margin-bottom: var(--space-md);
+  font-size: 0.88rem;
+}
+
+.errorAlert {
+  padding: var(--space-md);
+  background-color: rgba(211, 47, 47, 0.08);
+  border-left: 3px solid var(--color-error);
+  color: var(--color-error);
+  margin-bottom: var(--space-md);
+  font-size: 0.88rem;
+}

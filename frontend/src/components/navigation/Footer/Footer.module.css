@@ -1,0 +1,211 @@
+.footer {
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-xl);
+  border-top: 1px solid var(--color-charcoal-light);
+  margin-top: auto;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: var(--space-2xl);
+  margin-bottom: var(--space-3xl);
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.brandLogo {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: var(--color-white);
+  line-height: 1;
+}
+
+.tagline {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-champagne-gold);
+}
+
+.description {
+  font-size: 0.88rem;
+  color: #B0B0B0;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+.boutiqueInfo {
+  margin-top: var(--space-xs);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.82rem;
+  color: #A0A0A0;
+}
+
+.boutiqueLocation {
+  color: var(--color-warm-cream);
+  font-weight: 500;
+}
+
+.colTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--color-white);
+  margin-bottom: var(--space-md);
+  position: relative;
+  padding-bottom: var(--space-xs);
+}
+
+.colTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 24px;
+  height: 1px;
+  background-color: var(--color-champagne-gold);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.linkItem a {
+  font-size: 0.85rem;
+  color: #B0B0B0;
+  transition: all var(--transition-fast);
+}
+
+.linkItem a:hover {
+  color: var(--color-champagne-gold);
+  padding-left: 4px;
+}
+
+.newsletterCol {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.newsletterText {
+  font-size: 0.86rem;
+  color: #B0B0B0;
+  line-height: 1.6;
+}
+
+.newsletterForm {
+  display: flex;
+  gap: 8px;
+  margin-top: var(--space-xs);
+}
+
+.newsletterInput {
+  flex: 1;
+  padding: 10px 14px;
+  background-color: var(--color-charcoal-light);
+  border: 1px solid #444444;
+  color: var(--color-white);
+  font-size: 0.85rem;
+}
+
+.newsletterInput:focus {
+  outline: none;
+  border-color: var(--color-champagne-gold);
+}
+
+.paymentMethods {
+  margin-top: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paymentLabel {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #888888;
+}
+
+.paymentBadges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.badge {
+  padding: 4px 8px;
+  background-color: #2D2D2D;
+  border: 1px solid #3E3E3E;
+  font-size: 0.68rem;
+  font-weight: 600;
+  color: var(--color-warm-cream);
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.05em;
+}
+
+.badgeMomo {
+  border-color: #FFCC00;
+  color: #FFCC00;
+}
+
+.badgeOrange {
+  border-color: #FF7900;
+  color: #FF7900;
+}
+
+/* Bottom Bar */
+.bottomBar {
+  padding-top: var(--space-xl);
+  border-top: 1px solid var(--color-charcoal-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: #888888;
+}
+
+.adminLink {
+  color: #666666;
+  transition: color var(--transition-fast);
+}
+
+.adminLink:hover {
+  color: var(--color-champagne-gold);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-xl);
+  }
+}
+
+@media (max-width: 640px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  .bottomBar {
+    flex-direction: column;
+    gap: var(--space-sm);
+    text-align: center;
+  }
+}
+

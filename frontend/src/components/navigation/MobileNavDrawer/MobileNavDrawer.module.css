@@ -1,0 +1,127 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(34, 34, 34, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: var(--z-backdrop);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.backdropOpen {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: min(85vw, 360px);
+  background-color: var(--color-white);
+  z-index: var(--z-drawer);
+  transform: translateX(-100%);
+  transition: transform var(--transition-slow);
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+}
+
+.drawerOpen {
+  transform: translateX(0);
+}
+
+.drawerHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-lg);
+  border-bottom: 1px solid var(--color-border-grey);
+}
+
+.brand {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--color-charcoal);
+}
+
+.closeBtn {
+  color: var(--color-charcoal);
+  padding: 6px;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.closeBtn:hover {
+  color: var(--color-champagne-gold);
+}
+
+.navLinks {
+  padding: var(--space-lg) var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px var(--space-sm);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-charcoal);
+  border-bottom: 1px solid var(--color-border-light);
+  transition: all var(--transition-fast);
+}
+
+.navItem:hover {
+  color: var(--color-champagne-gold);
+  background-color: var(--color-cream-subtle);
+  padding-left: var(--space-md);
+}
+
+.drawerFooter {
+  margin-top: auto;
+  padding: var(--space-lg);
+  background-color: var(--color-cream-subtle);
+  border-top: 1px solid var(--color-border-grey);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.contactText {
+  font-size: 0.8rem;
+  color: var(--color-muted-grey);
+  line-height: 1.5;
+}
+
+.whatsappBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25D366;
+  color: var(--color-white);
+  padding: 10px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  border-radius: var(--radius-xs);
+  text-decoration: none;
+  transition: opacity var(--transition-fast);
+}
+
+.whatsappBtn:hover {
+  opacity: 0.9;
+}
+

@@ -1,0 +1,197 @@
+.pageWrapper {
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-3xl);
+  min-height: 80vh;
+}
+
+.checkoutLayout {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: var(--space-2xl);
+  align-items: flex-start;
+}
+
+@media (max-width: 900px) {
+  .checkoutLayout {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--color-border-grey);
+  padding-bottom: var(--space-md);
+}
+
+.stepItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--color-muted-grey);
+  font-weight: 500;
+}
+
+.stepItemActive {
+  color: var(--color-charcoal);
+  font-weight: 700;
+}
+
+.stepItemActive .stepNumber {
+  background-color: var(--color-champagne-gold);
+  color: var(--color-charcoal);
+  border-color: var(--color-champagne-gold);
+}
+
+.stepItemDone {
+  color: var(--color-success);
+}
+
+.stepNumber {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+}
+
+.cardSection {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-grey);
+  padding: var(--space-xl);
+  margin-bottom: var(--space-lg);
+}
+
+.sectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: var(--color-charcoal);
+  margin-bottom: var(--space-sm);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sectionSubtitle {
+  font-size: 0.85rem;
+  color: var(--color-muted-grey);
+  margin-bottom: var(--space-lg);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-md);
+}
+
+@media (max-width: 600px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.deliveryOptionCard {
+  border: 1px solid var(--color-border-grey);
+  padding: var(--space-md);
+  margin-bottom: var(--space-sm);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast);
+}
+
+.deliveryOptionCard:hover {
+  border-color: var(--color-champagne-gold);
+}
+
+.deliveryOptionSelected {
+  border-color: var(--color-champagne-gold);
+  background-color: var(--color-cream-subtle);
+}
+
+.paymentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-sm);
+}
+
+.paymentMethodCard {
+  border: 1px solid var(--color-border-grey);
+  padding: var(--space-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.paymentMethodCard:hover {
+  border-color: var(--color-champagne-gold);
+}
+
+.paymentMethodSelected {
+  border-color: var(--color-champagne-gold);
+  background-color: var(--color-cream-subtle);
+}
+
+.summarySidebar {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-grey);
+  padding: var(--space-xl);
+  position: sticky;
+  top: 100px;
+}
+
+.summaryTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  margin-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border-grey);
+  padding-bottom: var(--space-sm);
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  margin-bottom: var(--space-sm);
+  color: var(--color-charcoal);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.15rem;
+  font-weight: 700;
+  border-top: 1px solid var(--color-border-grey);
+  padding-top: var(--space-md);
+  margin-top: var(--space-md);
+  color: var(--color-charcoal);
+}
+
+.ussdModal {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: var(--space-md);
+}
+
+.ussdCard {
+  background-color: var(--color-white);
+  width: 100%;
+  max-width: 480px;
+  padding: var(--space-2xl);
+  border: 1px solid var(--color-border-grey);
+  text-align: center;
+}

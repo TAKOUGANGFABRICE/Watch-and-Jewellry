@@ -1,0 +1,52 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border-grey);
+}
+
+.image {
+  width: 100%;
+  aspect-ratio: 1;
+  background-color: var(--color-warm-cream);
+}
+
+.body {
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.brand {
+  height: 10px;
+  width: 40%;
+}
+
+.title {
+  height: 18px;
+  width: 80%;
+}
+
+.price {
+  height: 14px;
+  width: 50%;
+  margin-top: var(--space-xs);
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(245, 240, 230, 0.6) 0%,
+    rgba(255, 255, 255, 0.8) 50%,
+    rgba(245, 240, 230, 0.6) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+

@@ -1,0 +1,213 @@
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--color-charcoal);
+  color: var(--color-white);
+  padding: var(--space-4xl) var(--space-md);
+  background-image: radial-gradient(circle at center, rgba(45, 45, 45, 0.8) 0%, rgba(22, 22, 22, 0.95) 100%);
+  overflow: hidden;
+}
+
+.heroContent {
+  max-width: 820px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heroEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-md);
+}
+
+.heroTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 5vw + 1rem, 4.4rem);
+  font-weight: 500;
+  color: var(--color-white);
+  line-height: 1.15;
+  margin-bottom: var(--space-lg);
+  letter-spacing: -0.01em;
+}
+
+.heroSubtitle {
+  font-size: clamp(1rem, 1.2vw + 0.6rem, 1.2rem);
+  color: var(--color-warm-cream);
+  line-height: 1.65;
+  max-width: 620px;
+  margin-bottom: var(--space-2xl);
+  font-weight: 300;
+}
+
+.heroButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+/* Department Split Banner */
+.departmentSection {
+  padding: var(--space-4xl) 0;
+  background-color: var(--color-cream-subtle);
+}
+
+.departmentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+}
+
+.deptCard {
+  position: relative;
+  height: 480px;
+  background-color: var(--color-charcoal);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: var(--space-2xl);
+  color: var(--color-white);
+  text-decoration: none;
+  border: 1px solid var(--color-border-grey);
+}
+
+.deptCardImage {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.55;
+  transition: transform var(--transition-slow), opacity var(--transition-normal);
+}
+
+.deptCard:hover .deptCardImage {
+  transform: scale(1.06);
+  opacity: 0.7;
+}
+
+.deptCardContent {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.deptEyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--color-champagne-gold);
+}
+
+.deptTitle {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.deptLink {
+  font-family: var(--font-sans);
+  font-size: 0.84rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-champagne-gold);
+  margin-top: var(--space-xs);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Featured Products Section */
+.featuredSection {
+  padding: var(--space-4xl) 0;
+}
+
+.productGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-lg);
+}
+
+/* Trust Pillars */
+.trustSection {
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-warm-cream);
+  border-top: 1px solid var(--color-border-grey);
+  border-bottom: 1px solid var(--color-border-grey);
+}
+
+.trustGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-xl);
+}
+
+.trustItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-xs);
+}
+
+.trustIcon {
+  color: var(--color-champagne-gold);
+  margin-bottom: var(--space-2xs);
+}
+
+.trustTitle {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-charcoal);
+  font-weight: 600;
+}
+
+.trustText {
+  font-size: 0.85rem;
+  color: var(--color-muted-grey);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .productGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .trustGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2xl);
+  }
+}
+
+@media (max-width: 768px) {
+  .departmentGrid {
+    grid-template-columns: 1fr;
+  }
+  .deptCard {
+    height: 380px;
+  }
+  .productGrid {
+    grid-template-columns: 1fr;
+  }
+  .trustGrid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--space-2xl) var(--space-lg);
+  border: 1px dashed var(--color-border-grey);
+  background-color: var(--color-cream-subtle);
+  max-width: 520px;
+  margin: var(--space-xl) auto;
+}
+
+.iconCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: rgba(211, 47, 47, 0.1);
+  color: var(--color-error);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: 1.25rem;
+  margin-bottom: var(--space-xs);
+  color: var(--color-charcoal);
+}
+
+.message {
+  font-size: 0.9rem;
+  color: var(--color-muted-grey);
+  margin-bottom: var(--space-md);
+  line-height: 1.5;
+}
+
